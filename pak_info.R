@@ -7,7 +7,7 @@
 #
 #Script Name:Homework02-tidyverse package
 #
-#Script Description:install tidyverse package and  access information about the tidyverse package
+#Script Description: install tidyverse package and  access information about the tidyverse package
 #
 #
 #SETUP ----------------------------------------------
