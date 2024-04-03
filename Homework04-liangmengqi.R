@@ -11,6 +11,7 @@
 #
 #
 #SETUP ----------------------------------------------
+
 #前期准备
 #安装必要的包
 install.packages(c('caret', 'skimr', 'RANN', 'randomForest'))
@@ -151,6 +152,6 @@ print(paste("RMSE:", RMSE))
 R_squared <- cor( testData$mpg,predicted)^2
 print(paste("R-squared:", R_squared))  
 
-#可视化预测结果
-plot(testData$mpg, predicted, main = "Actual vs. Predicted", xlab = "Actual", ylab = "Predicted")
-abline(0, 1, col = "pink")  
+#绘制实际值 testData$mpg 与预测值 predicted 的散点图。其中 main 参数设置图的标题为 "Predicted Results"，xlab 参数设置了 x 轴标签为 "Actual value"，ylab 参数设置了 y 轴标签为 "Predicted value"
+plot(testData$mpg, predicted, main = "Predicted Results", xlab = "Actual value", ylab = "Predicted value")
+abline(0, 1, col = "pink")  #添加一条斜率为1（1:1关系）的直线，代表完美预测的情况，即预测值等于实际值
