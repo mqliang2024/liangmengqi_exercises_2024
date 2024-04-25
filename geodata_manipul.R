@@ -114,6 +114,8 @@ slope <- terrain(doubs_dem_utm_masked, opt = "slope")
 writeRaster(watershed, filename = "D:/data-driven-ecology/QGIS/watershed.tif", format = "GTiff", overwrite = TRUE)
 writeRaster(slope, filename = "D:/data-driven-ecology/QGIS/slope.tif", format = "GTiff", overwrite = TRUE)
 # 保存集水区和坡度数据
+watershed_raster <- raster("D:/data-driven-ecology/QGIS/watershed.tif")
+slope_raster<-raster("D:/data-driven-ecology/QGIS/slope.tif")
 watershed_values <- raster::extract(watershed_raster, sample_points[, c("mapX", "mapY")])
 slope_values <- raster::extract(slope_raster, sample_points[, c("mapX", "mapY")])
 
